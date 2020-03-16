@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: darkcyan;
+        font-family: 'Muli', sans-serif;
+    }
+    header {
+        background-color: darkcyan;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .header__img {
+        margin-top: 20px;
+        width: 100px;
+        margin-left: 10px;
+    }
+    .header__menu {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .header__menu:hover ul, ul:hover {
+        display: block;
+    }
+
+    .header__menu--profile {
+        margin-right: 10px;
+        /*width: 40px;*/
+        display: flex;
+        align-items: center;
+    }
+
+    .header__menu--profile img {
+        margin-right: 8px; 
+        width: 40px;
+    }
+
+    .header__menu--profile p {
+        margin-right: 0px;
+        width: 40px;
+    }
+    .header__menu li {
+        margin: 10px 0px;
+    }
+
+    .header__menu li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .header__menu li a:hover {
+        text-decoration: underline;
+    }
+    .header__menu ul {
+        display: none;
+        list-style: none;
+        padding: 0px;
+        width: 100px;
+        text-align: right;
+        margin: 0px 0px 0px -15px;
+        position: absolute;
+    }
+
+    .main {
+        height: 300px;
+    }
+
+    .main__tittle {
+        color: white;
+        font-size: 20px;
+    }
+
+    .input {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid white;
+        border-radius: 25px;
+        font-size: 16px;
+        font-family: font-family: 'Muli', sans-serif;
+        width: 70%;
+        height: 50px;
+        padding: 0px 20px;
+    }
+    ::placeholder {
+        color: white;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative;
+    }
+    
+    .carousel__container {
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carousel--item {
+        background-color: white;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms;
+        transform-origin: center left;
+        position: relative;
+    }
+
+    .carousel--item:hover ~ .carousel--item {
+        transform: translate3d(100px, 0, 0);
+    }
+    .carousel__container:hover .carousel--item {
+        opacity: 0.3;
+    }
+
+    .carousel__container:hover .carousel--item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    .carousel--item__img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+
+    }
+
+    .carousel--item__details {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0,9) 0%, rgba(0, 0, 0, 0) 100%);
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+    }
+
+    .carousel--item__details:hover {
+        opacity: 1;
+    }
+    .globalwidth {
+        width: 100%;
+    }
+    .footer {
+        background-color: darkcyan;
+        height: 80px;
+    }
+    p {
+        color: white;
+    }
+</style>
+<body>
+    <header class= "header">
+        <img class="header__img" src="./Cipheak-White.png" alt="">
+            <div class="header__menu">
+                <div class="header__menu--profile">
+                    <img src="./icons8-natural-user-interface-1-64.png" alt="">
+                    <p>Perfil</p>
+                </div>
+                <ul>
+                    <li ><a href="/">Cuenta</a></li>
+                    <li><a href="/">Cerrar Sesión</a></li>
+                </ul>
+
+            </div>
+    </header>
+        <section class="main">
+            <h2 class="main__tittle">Give a name to your language</h2>
+            <input class="input" type="text" placeholder="Cipheak Language">
+        </section>
+        <section class="carousel">
+            <div class="carousel__container">
+                <div class="carousel--item">
+                    <img class="carousel--item__img" src="https://images.pexels.com/photos/1424246/pexels-photo-1424246.jpeg?cs=srgb&dl=photo-of-brown-house-near-mountain-1424246.jpg&fm=jpg" alt="">
+                        <div carousel--item__details></div>
+                            <div>
+                                <img src="./icons8-libro-80.png" alt="Cipheak Language information">
+                                <img src="./icons8-descargar-80.png" alt="Download manual">
+                            </div>
+                            <p class="carousel--item__details--title"> Título descriptivo</p>
+                            <p class="carousel--item__details--subtitle">Created by</p>
+                </div>
+                <div class="carousel--item">
+
+                </div>
+
+            </div>
+        </section>
+    <footer class="footer globalwidth "></footer>
+</body>
+</html>
